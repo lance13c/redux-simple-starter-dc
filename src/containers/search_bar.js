@@ -21,9 +21,15 @@ export default class SearchBar extends Component {
 		this.setState({ term: event.target.value});
 	}
 	
+	onFormSubmit(event) {
+		event.preventDefault();
+		
+		// Check if there is data
+	}
+	
 	render() {
 			return (
-				<form className="input-group">
+				<form onSubmit={this.onFormSubmit} className="input-group">
 					<input
 						placeholder="Get forecasts for your favorite cities"
 						className="form-control"
